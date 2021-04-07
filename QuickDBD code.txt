@@ -1,0 +1,36 @@
+# Version 0.1
+
+Titles
+-
+title_id PK STRING
+title STRING 
+
+Dept_Manager
+-
+dept_no  STRING FK >- Departments.dept_no
+empt_no  INT FK >- Employees.emp_no
+
+Dept_Employee
+-
+emp_no INT PK FK >- Employees.emp_no
+dept_no STRING FK >- Departments.dept_no
+
+Employees
+-
+emp_no INT PK
+emp_title STRING FK >- Titles.title_id
+birth_date DATE
+first_name STRING
+last_name STRING
+sex STRING(1)
+hire_date DATE
+
+Salaries
+-
+emp_no INT PK FK >- Employees.emp_no
+salary INT
+
+Departments
+-
+dept_no PK STRING
+dept_name STRING
